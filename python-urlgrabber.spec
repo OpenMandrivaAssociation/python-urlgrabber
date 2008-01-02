@@ -9,6 +9,7 @@ Release: %mkrel 4
 Source0: http://linux.duke.edu/projects/urlgrabber/download/%{oname}-%{version}.tar.bz2
 License: LGPL
 Group: Development/Python
+BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArchitectures: noarch
 Url: http://linux.duke.edu/projects/mini/urlgrabber/
 BuildRequires: python-devel
