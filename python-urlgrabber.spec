@@ -35,7 +35,7 @@ features:
   * progress meters - the ability to report download progress automatically, 
     even when using urlopen!
   * throttling - restrict bandwidth usage
-  * retries - automatically retry a download if it fails. The number of retries 
+  * retries - automatically retry a download if it fails. The number of retries
     and failure types are configurable.
   * authenticated server access for http and ftp
   * proxy support - support for authenticated http and ftp proxies
