@@ -5,7 +5,7 @@
 Summary: A high-level cross-protocol url-grabber
 Name: %{name}
 Version: %{version}
-Release: %mkrel 1
+Release: %mkrel 2
 Source0: http://linux.duke.edu/projects/urlgrabber/download/%{oname}-%{version}.tar.gz
 License: LGPLv2+
 Group: Development/Python
