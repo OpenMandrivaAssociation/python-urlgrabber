@@ -1,11 +1,11 @@
 %define oname urlgrabber
 %define name python-%oname
-%define version 3.0.0
+%define version 3.1.0
 
 Summary: A high-level cross-protocol url-grabber
 Name: %{name}
 Version: %{version}
-Release: %mkrel 2
+Release: %mkrel 1
 Source0: http://linux.duke.edu/projects/urlgrabber/download/%{oname}-%{version}.tar.gz
 License: LGPLv2+
 Group: Development/Python
