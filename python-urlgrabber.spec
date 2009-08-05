@@ -1,18 +1,20 @@
 %define oname urlgrabber
 %define name python-%oname
-%define version 3.1.0
+%define version 3.9.0
 
 Summary: A high-level cross-protocol url-grabber
 Name: %{name}
 Version: %{version}
 Release: %mkrel 1
-Source0: http://linux.duke.edu/projects/urlgrabber/download/%{oname}-%{version}.tar.gz
+Source0: http://urlgrabber.baseurl.org/download/%{oname}-%{version}.tar.gz
+Patch: curl-timeout-head.patch
 License: LGPLv2+
 Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArchitectures: noarch
-Url: http://linux.duke.edu/projects/mini/urlgrabber/
+Url: http://urlgrabber.baseurl.org/
 BuildRequires: python-devel
+Requires: python-curl
 
 %description
 A high-level cross-protocol url-grabber.
@@ -45,6 +47,7 @@ features:
 
 %prep
 %setup -q -n %oname-%version
+%patch -p1
 
 %build
 python setup.py build
