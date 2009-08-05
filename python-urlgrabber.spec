@@ -14,6 +14,7 @@ BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArchitectures: noarch
 Url: http://urlgrabber.baseurl.org/
 BuildRequires: python-devel
+BuildRequires: python-curl
 Requires: python-curl
 
 %description
