@@ -1,13 +1,13 @@
 %define oname urlgrabber
 %define name python-%oname
-%define version 3.9.0
+%define version 3.9.1
 
 Summary: A high-level cross-protocol url-grabber
 Name: %{name}
 Version: %{version}
 Release: %mkrel 1
 Source0: http://urlgrabber.baseurl.org/download/%{oname}-%{version}.tar.gz
-Patch: curl-timeout-head.patch
+Patch1: urlgrabber-HEAD.patch
 License: LGPLv2+
 Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -48,7 +48,7 @@ features:
 
 %prep
 %setup -q -n %oname-%version
-%patch -p1
+%patch1 -p1
 
 %build
 python setup.py build
