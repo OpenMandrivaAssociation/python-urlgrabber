@@ -5,7 +5,7 @@
 Summary: A high-level cross-protocol url-grabber
 Name: %{name}
 Version: %{version}
-Release: %mkrel 1
+Release: %mkrel 2
 Source0: http://urlgrabber.baseurl.org/download/%{oname}-%{version}.tar.gz
 Patch1: urlgrabber-HEAD.patch
 License: LGPLv2+
