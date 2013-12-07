@@ -3,7 +3,7 @@
 Summary:	A high-level cross-protocol url-grabber
 Name:		python-%{oname}
 Version:	3.9.1
-Release:	6
+Release:	7
 License:	LGPLv2+
 Group:		Development/Python
 Url:	http://urlgrabber.baseurl.org/
