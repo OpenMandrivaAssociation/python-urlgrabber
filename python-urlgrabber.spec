@@ -1,18 +1,18 @@
 %define oname urlgrabber
 
-Summary:	A high-level cross-protocol url-grabber
+Summary: A high-level cross-protocol url-grabber
+
 Name:		python-%{oname}
-Version:	3.9.1
-Release:	9
-License:	LGPLv2+
+Version: 	3.10.1
+Release: 	1
+Source0: 	http://urlgrabber.baseurl.org/download/urlgrabber-%{version}.tar.gz
+License: 	LGPLv2+
 Group:		Development/Python
-Url:	http://urlgrabber.baseurl.org/
-Source0:	http://urlgrabber.baseurl.org/download/%{oname}-%{version}.tar.gz
-Patch1:		urlgrabber-HEAD.patch
-BuildArch:	noarch
-BuildRequires:	python-curl
-BuildRequires:	pkgconfig(python)
-Requires:	python-curl
+BuildArch: 	noarch
+Url:		http://urlgrabber.baseurl.org/
+BuildRequires: 	python-devel
+BuildRequires: 	python-curl
+Requires: 	python-curl
 
 %description
 A high-level cross-protocol url-grabber.
@@ -42,20 +42,24 @@ features:
   * mirror groups - treat a list of mirrors as a single source, automatically 
     switching mirrors if there is a failure.
 
+
 %prep
-%setup -qn %{oname}-%{version}
-%apply_patches
+%setup -q -n %{oname}-%{version}
 
 %build
 python setup.py build
 
 %install
+rm -rf %{buildroot} installed-docs
 python setup.py install --root=%{buildroot}
 mv %{buildroot}%{_datadir}/doc/%{oname}-%{version}/ installed-docs
+
+%clean
 
 %files
 %doc installed-docs/*
 %{_bindir}/%{oname}
+/usr/libexec/*
 %{py_puresitedir}/%{oname}/
 %{py_puresitedir}/*.egg-info
 

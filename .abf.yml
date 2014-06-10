@@ -1,2 +1,4 @@
+removed_sources:
+  urlgrabber-3.9.1.tar.gz: 937c7ad3177539c337d4010e0175b2c7bd874938
 sources:
-  "urlgrabber-3.9.1.tar.gz": 937c7ad3177539c337d4010e0175b2c7bd874938
+  urlgrabber-3.10.1.tar.gz: 75206abe4c2498d4ff01498e4a35192a65c92f3e
