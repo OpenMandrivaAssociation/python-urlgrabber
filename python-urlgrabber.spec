@@ -10,7 +10,7 @@ License: 	LGPLv2+
 Group:		Development/Python
 BuildArch: 	noarch
 Url:		http://urlgrabber.baseurl.org/
-BuildRequires: 	python-devel
+BuildRequires: 	python3-devel
 BuildRequires: 	python-curl
 Requires: 	python-curl
 
