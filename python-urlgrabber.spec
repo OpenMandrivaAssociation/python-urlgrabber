@@ -10,9 +10,9 @@ License: 	LGPLv2+
 Group:		Development/Python
 BuildArch: 	noarch
 Url:		http://urlgrabber.baseurl.org/
-BuildRequires: 	python3-devel
-BuildRequires: 	python-curl
-Requires: 	python-curl
+BuildRequires: 	python-devel
+BuildRequires: 	python2-curl
+Requires: 	python2-curl
 
 %description
 A high-level cross-protocol url-grabber.
@@ -47,11 +47,11 @@ features:
 %setup -q -n %{oname}-%{version}
 
 %build
-python setup.py build
+python2 setup.py build
 
 %install
 rm -rf %{buildroot} installed-docs
-python setup.py install --root=%{buildroot}
+python2 setup.py install --root=%{buildroot}
 mv %{buildroot}%{_datadir}/doc/%{oname}-%{version}/ installed-docs
 
 %clean
@@ -60,6 +60,6 @@ mv %{buildroot}%{_datadir}/doc/%{oname}-%{version}/ installed-docs
 %doc installed-docs/*
 %{_bindir}/%{oname}
 /usr/libexec/*
-%{py_puresitedir}/%{oname}/
-%{py_puresitedir}/*.egg-info
+%{py2_puresitedir}/%{oname}/
+%{py2_puresitedir}/*.egg-info
 
