@@ -3,8 +3,8 @@
 Summary: A high-level cross-protocol url-grabber
 
 Name:		python-%{oname}
-Version: 	3.10.1
-Release: 	7
+Version: 	3.10.2
+Release: 	1
 Source0: 	http://urlgrabber.baseurl.org/download/urlgrabber-%{version}.tar.gz
 License: 	LGPLv2+
 Group:		Development/Python
@@ -62,4 +62,3 @@ mv %{buildroot}%{_datadir}/doc/%{oname}-%{version}/ installed-docs
 /usr/libexec/*
 %{py2_puresitedir}/%{oname}/
 %{py2_puresitedir}/*.egg-info
-
