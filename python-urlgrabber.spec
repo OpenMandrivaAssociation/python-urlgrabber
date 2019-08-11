@@ -12,8 +12,12 @@ Release:        %mkrel 1
 License:        LGPLv2+
 Group:          Development/Python
 Url:            http://urlgrabber.baseurl.org/
-#Source0:        http://urlgrabber.baseurl.org/download/%{oname}-%{version}.tar.gz
 Source0:        https://github.com/rpm-software-management/urlgrabber/releases/download/urlgrabber-%{dashversion}/urlgrabber-%{version}.tar.gz
+BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(pycurl)
+BuildRequires:  python3dist(six)
+%{?python_provide:%python_provide python3-%{oname}}
 
 BuildArch:      noarch
 
@@ -57,17 +61,6 @@ BuildRequires:  python2dist(six)
 
 %description -n python2-%oname %_description
 
-%package -n     python3-%oname
-Summary:        A high-level cross-protocol url-grabber
-BuildRequires:  pkgconfig(python3)
-BuildRequires:  python3dist(setuptools)
-BuildRequires:  python3dist(pycurl)
-BuildRequires:  python3dist(six)
-%{?python_provide:%python_provide python3-%{oname}}
-
-%description -n python3-%oname %_description
-
-
 %prep
 %autosetup -n %oname-%version -p1
 
@@ -83,14 +76,13 @@ mv %buildroot%_datadir/doc/%oname-%version/ installed-docs
 
 sed -e "s|/usr/bin/python|%{__python3}|" -i %{buildroot}%{_libexecdir}/%oname-ext-down
 
-
 %files -n python2-%oname
 %license LICENSE
 %doc installed-docs/*
 %{python2_sitelib}/%oname/
 %{python2_sitelib}/*.egg-info
 
-%files -n python3-%oname
+%files
 %license LICENSE
 %doc installed-docs/*
 %{_bindir}/%oname
