@@ -51,36 +51,18 @@ features: \
 
 %description %_description
 
-%package -n     python2-%oname
-Summary:        A high-level cross-protocol url-grabber
-BuildRequires:  pkgconfig(python2)
-BuildRequires:  python2dist(setuptools)
-BuildRequires:  python2dist(pycurl)
-BuildRequires:  python2dist(six)
-%{?python_provide:%python_provide python2-%{oname}}
-
-%description -n python2-%oname %_description
-
 %prep
 %autosetup -n %oname-%version -p1
 
 %build
-%py2_build
 %py3_build
 
 %install
-%py2_install
 %py3_install
 
 mv %buildroot%_datadir/doc/%oname-%version/ installed-docs
 
 sed -e "s|/usr/bin/python|%{__python3}|" -i %{buildroot}%{_libexecdir}/%oname-ext-down
-
-%files -n python2-%oname
-%license LICENSE
-%doc installed-docs/*
-%{python2_sitelib}/%oname/
-%{python2_sitelib}/*.egg-info
 
 %files
 %license LICENSE
