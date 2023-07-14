@@ -7,7 +7,6 @@ Group:          Development/Python
 Url:            http://urlgrabber.baseurl.org/
 #Source0:		https://pypi.io/packages/source/u/urlgrabber/urlgrabber-%{version}.tar.gz
 Source0:        https://github.com/rpm-software-management/urlgrabber/releases/download/urlgrabber-%(echo %version |sed -e 's,\.,-,g')/urlgrabber-%{version}.tar.gz
-https://github.com/rpm-software-management/urlgrabber/archive/refs/tags/urlgrabber-4-1-0.tar.gz
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(pycurl)
