@@ -4,7 +4,7 @@ Version:        4.1.0
 Release:        1
 License:        LGPLv2+
 Group:          Development/Python
-Url:            http://urlgrabber.baseurl.org/
+Url:            https://urlgrabber.baseurl.org/
 #Source0:		https://pypi.io/packages/source/u/urlgrabber/urlgrabber-%{version}.tar.gz
 Source0:        https://github.com/rpm-software-management/urlgrabber/releases/download/urlgrabber-%(echo %version |sed -e 's,\.,-,g')/urlgrabber-%{version}.tar.gz
 BuildRequires:  pkgconfig(python3)
