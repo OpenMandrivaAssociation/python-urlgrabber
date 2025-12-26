@@ -1,16 +1,16 @@
 Summary:        A high-level cross-protocol url-grabber
 Name:           python-urlgrabber
 Version:        4.1.0
-Release:        1
+Release:        2
 License:        LGPLv2+
 Group:          Development/Python
 Url:            https://urlgrabber.baseurl.org/
 #Source0:		https://pypi.io/packages/source/u/urlgrabber/urlgrabber-%{version}.tar.gz
 Source0:        https://github.com/rpm-software-management/urlgrabber/releases/download/urlgrabber-%(echo %version |sed -e 's,\.,-,g')/urlgrabber-%{version}.tar.gz
 BuildRequires:  pkgconfig(python3)
-BuildRequires:  python3dist(setuptools)
-BuildRequires:  python3dist(pycurl)
-BuildRequires:  python3dist(six)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(pycurl)
+BuildRequires:  python%{pyver}dist(six)
 
 BuildArch:      noarch
 
