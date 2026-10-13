@@ -1,7 +1,7 @@
 Summary:        A high-level cross-protocol url-grabber
 Name:           python-urlgrabber
 Version:        4.1.0
-Release:        2
+Release:        3
 License:        LGPLv2+
 Group:          Development/Python
 Url:            https://urlgrabber.baseurl.org/
